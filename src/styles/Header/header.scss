@@ -1,0 +1,280 @@
+
+#header {
+  background: linear-gradient(90deg, #72072D 0%, #FF005C 100%);
+
+  .header {
+    &--kor {
+      display: none;
+      position: absolute;
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 195px;
+
+    &--menu {
+      display: none;
+    }
+
+    h1 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 48px;
+      color: #FFFFFF;
+
+    }
+
+    &--input {
+      position: relative;
+      width: 40%;
+
+      input {
+        color: #FFFFFF;
+        line-height: 43px;
+        position: relative;
+        width: 100%;
+        height: 43px;
+        background: rgba(196, 196, 196, 0.14);
+        border: 1px solid #FFFFFF;
+        border-radius: 10px;
+        padding-left: 7px;
+        outline: none;
+      }
+
+      &__icon {
+        position: absolute;
+        right: 20px;
+        bottom: 10px;
+        color: #FFFFFF;
+      }
+
+    }
+
+    &--icon {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 18%;
+
+      &__img {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        a {
+          padding: 10px 0;
+          font-family: 'Inter', sans-serif;
+          font-weight: 400;
+          font-size: 16px;
+          color: #FFFFFF;
+        }
+
+        &--bg {
+          font-size: 26px;
+        }
+
+      }
+
+    }
+  }
+}
+
+
+@media (max-width: 1200px) {
+  #header {
+
+    .header {
+      &--block {
+        h1 {
+          font-size: 30px;
+        }
+      }
+
+
+      &--icon {
+        &__img {
+          a {
+            font-size: 12px;
+          }
+
+          &--bg {
+            font-size: 20px;
+          }
+        }
+      }
+
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  #header {
+    .container {
+      width: 90%;
+    }
+
+    .header {
+
+      &--block {
+        h1 {
+          width: 150px;
+          font-size: 34px;
+        }
+      }
+
+
+      &--icon {
+        &__img {
+          a {
+            font-size: 8px;
+
+          }
+
+          &--first {
+            font-size: 23px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 992px) {
+  #header {
+
+
+    .header {
+      &--block {
+        h1 {
+          font-size: 25px;
+        }
+      }
+
+
+      &__icon {
+        font-size: 12px;
+      }
+
+    }
+
+    &--icon {
+      &__img {
+        font-size: 5px;
+
+        &--first {
+          font-size: 13px;
+        }
+      }
+
+
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  #header {
+    .container {
+      .header {
+        &--block {
+
+        }
+
+        &--menu {
+          display: block;
+          position: absolute;
+          left: 10px;
+          top: 10px;
+          color: #FF005C;
+          cursor: pointer;
+        }
+
+        &--icon {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          background-color: #FF005C;
+          z-index: -10;
+          transition: left 1s;
+
+          a {
+            font-size: 20px;
+          }
+
+        }
+      }
+    }
+  }
+
+}
+
+@media (max-width: 576px) {
+  #header {
+    background: none;
+
+    .container {
+      .header {
+        display: flex;
+        flex-direction: column;
+
+        &--block {
+          h1 {
+            text-align: center;
+            //font-style: normal;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 48px;
+            color: #D118A8;
+          }
+
+        }
+
+        &--input {
+          &__icon {
+            position: absolute;
+            color: #FF005C;
+            font-size: 20px;
+
+          }
+
+          input {
+            display: none;
+            color: #FFFFFF;
+            background: blue;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+
+@media (max-width: 320px) {
+  #header {
+    .container {
+      .header {
+        &--kor {
+          display: block;
+          position: absolute;
+          left: 290px;
+          top: 14px;
+        }
+
+        &--input {
+          &__icon {
+            position: absolute;
+            left: 110px;
+            color: #D118A8;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+
